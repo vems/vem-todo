@@ -1,0 +1,6 @@
+[submodule "services/todo"]
+	path = services/todo
+	url = https://github.com/vems/todo-service-go.git
+[submodule "services/proxy"]
+	path = services/proxy
+	url = https://github.com/vems/proxy.git

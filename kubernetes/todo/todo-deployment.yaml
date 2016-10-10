@@ -1,0 +1,19 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: todo
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        service: todo
+        tier: backend
+        transport: grpc
+    spec:
+      containers:
+      - name: todosrv
+        image: vems/todo-service-go:v1.0.0
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 8080

@@ -1,0 +1,12 @@
+package: github.com/vems/vem-go/services/api
+import:
+- package: github.com/vems/pb
+  version: ^1.0.1
+  subpackages:
+  - add
+  - todo
+- package: golang.org/x/net
+  subpackages:
+  - context
+- package: google.golang.org/grpc
+  version: ^1.0.1-GA
