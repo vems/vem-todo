@@ -1,19 +1,18 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: todo
+  name: proxy
 spec:
   replicas: 1
   template:
     metadata:
       labels:
-        service: todo
-        tier: backend
-        transport: grpc
+        service: proxy
+        tier: infra
     spec:
       containers:
-      - name: todosrv
-        image: vems/todo-service-go:v1.0.0
+      - name: proxysrv
+        image: vems/proxy:v1.0.0
         imagePullPolicy: Never
         ports:
         - containerPort: 8080
