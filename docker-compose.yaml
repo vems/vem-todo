@@ -1,7 +1,14 @@
+proxy:
+  build: ./services/proxy
+  ports:
+    - "8080:80"
+  links:
+    - web
+    - api
+web:
+  build: ./services/web
 api:
   build: ./services/api
-  ports:
-    - "8080:8080"
   links:
     - todo
 todo:

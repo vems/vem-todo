@@ -4,3 +4,6 @@
 [submodule "services/proxy"]
 	path = services/proxy
 	url = https://github.com/vems/proxy.git
+[submodule "services/web"]
+	path = services/web
+	url = https://github.com/vems/todo-web.git
